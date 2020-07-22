@@ -1,0 +1,21 @@
+<html>
+
+<head>
+	<title>MUSIC!</title>
+</head>
+
+<body>
+	<h1>MUSIC</h1>
+	{% for song in songs%}
+        <li>
+            Song Title: {{song.song}}<br>
+            <a href={{url_for('songsBy',artistName = song.artist)}}>Artist: {{song.artist}}<br></a>
+            Description: {{song.description}}<br>
+        </li>
+    {%endfor%}
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<title>MUSIC!</title>
+</head>
+
+<body>
+	<h1>MUSIC</h1>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	<ul class=flashes>
+		{% for message in messages %}
+		<li>{{ message }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+	{% endwith %}
+	<form action="/createUser" method="post">
+		<label for="username">Username</label>
+		<input type="text" name="username">
+		<label for="password">Password</label>
+		<input type="text" name="password0">
+        <label for="password">Again</label>
+		<input type="text" name="password1">
+        <input type="submit" value="Sign Up">
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+	<title>MUSIC!</title>
+</head>
+
+<body>
+	<h1>MUSIC</h1>
+    <h4>Hello {{user}} </h4>
+	<form action="/add" method="post">
+		<label for="song">Song title</label>
+		<input type="text" name="song">
+		<label for="artist">Artist</label>
+		<input type="text" name="artist">
+		<label for="description">Description</label>
+		<input type="text" name="description"><br>
+        <input type="submit" value="Submit">
+	</form>
+
+    <form action="/artistSearch" method='post'>
+    	<label for="artist">Artist</label>
+		<input type="text" name="artist">
+        <input type="submit" value="Search">
+    </form>
+</body>
+
+</html>

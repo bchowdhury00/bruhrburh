@@ -1,0 +1,30 @@
+<html>
+
+<head>
+	<title>MUSIC!</title>
+</head>
+
+<body>
+	<h1>MUSIC</h1>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	<ul class=flashes>
+		{% for message in messages %}
+		<li>{{ message }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+	{% endwith %}
+
+	<form action="/login" method="post">
+		<label for="username">Username</label>
+		<input type="text" name="username">
+		<label for="password">Password</label>
+		<input type="text" name="password">
+		<input type="submit" value="Login In">
+	</form>
+		<p>Don't Have An Account?</p>
+		<a href="/newAccount"><button>Sign Up</button></a>
+</body>
+
+</html>

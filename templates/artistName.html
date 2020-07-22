@@ -1,0 +1,17 @@
+<html>
+
+<head>
+	<title>MUSIC!</title>
+</head>
+<body>
+	<h1>MUSIC</h1>
+	{% for song in songs%}
+        <li>
+            Song Title: {{song.song}}<br>
+            Artist: {{song.artist}}<br>
+            Description: {{song.description}}<br>
+        </li>
+    {%endfor%}
+</body>
+
+</html>
